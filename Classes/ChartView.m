@@ -46,9 +46,9 @@
 				NSArray *rowLabels = [myData objectForKey:@"Rows"];
 
 				double sizeWithThisWidth = column_width*([rowLabels count]-1);
-				if (sizeWithThisWidth<320.0)
+				if (sizeWithThisWidth<768.0)
 				{
-					column_width = 320.0 / ([rowLabels count]-1);
+					column_width = 768.0 / ([rowLabels count]-1);
 					
 				}
 				break;
@@ -77,13 +77,13 @@
 {
 	NSArray *rowLabels = [myData objectForKey:@"Rows"];
 	
-	CGRect retRect = CGRectMake(0,0,column_width*([rowLabels count]-1), 367.0);
+	CGRect retRect = CGRectMake(0,0,column_width*([rowLabels count]-1), 911.0);
 
 	
 	// less than screen width -> change to screen width, that also affects charts with only one day
-	if (retRect.size.width<320)
+	if (retRect.size.width<768.0)
 	{
-		retRect.size.width=320.0;
+		retRect.size.width=768.0;
 	}
 	
 	if (retRect.size.width>2000.0)
@@ -247,9 +247,9 @@
 		CGSize labelSize = [label sizeWithFont:[UIFont systemFontOfSize:9.0]];
 		if (labelSize.width<backRect.size.width)
 		{
-			if (labelRect.size.width>320.0)
+			if (labelRect.size.width>768.0)
 			{
-				labelRect.size.width = 320.0;
+				labelRect.size.width = 768.0;
 			}
 			
 			[label drawInRect:labelRect withFont:[UIFont systemFontOfSize:9.0] lineBreakMode:UILineBreakModeClip alignment:UITextAlignmentCenter];

@@ -41,7 +41,7 @@
 		
 		NSString *axis_type = [dataDict objectForKey:@"Axis"];
 		
-		CGRect axis_size = CGRectMake(0, 0, 30, 367);
+		CGRect axis_size = CGRectMake(0, 0, 30, 911.0);
 		//AxisView *myAxis;
 	
 		if ([axis_type isEqualToString:@"Sum"])
@@ -59,7 +59,7 @@
 		[rootView addSubview:myAxis];
 		[myAxis release];
 		
-		CGRect legend_size = CGRectMake(0, 267.0, 320, 100.0);
+		CGRect legend_size = CGRectMake(0, 811.0, 768.0, 100.0);
 		self.myLegend = [[LegendView alloc] initWithFrame:legend_size Data:dataDict];
 		myAxis.bottom_inset = myLegend.required_height+10.0;
 		myChart.bottom_inset =  myLegend.required_height+10.0;
@@ -70,7 +70,7 @@
 		[myLegend release];
 		
 		CGRect chart_size = [myChart chartDimensions];
-		CGRect scroll_size = CGRectMake(0, 0, 320, 367);
+		CGRect scroll_size = CGRectMake(0, 0, 768.0, 911.0);
 		
 		self.myScroll = [[UIScrollView alloc] initWithFrame:scroll_size];
 		[rootView insertSubview:myScroll belowSubview:myAxis];

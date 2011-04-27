@@ -784,7 +784,7 @@
 	
 	UIAlertView *alert = [[UIAlertView alloc] 
 						  initWithTitle:[@"About " stringByAppendingString:title]
-						  message:[NSString stringWithFormat:@"Version %@\n\n© 2009 Drobnik.com\nAll rights reserved.", version]
+						  message:[NSString stringWithFormat:@"Version %@\n\n© 2009 Drobnik.com\nAll rights reserved.\n\niPad version by\nhttp://github.com/iosdeveloper", version]
 						  delegate:self 
 						  cancelButtonTitle:@"Dismiss" 
 						  otherButtonTitles:@"Contact", nil];
